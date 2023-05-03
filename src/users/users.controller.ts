@@ -1,6 +1,7 @@
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { Public } from 'src/auth/decorators/public.decorator';
 import { UsersService } from './users.service';
+import { CreateUsersDto } from './dto/create-users.dto/create-users.dto';
 
 @Controller('users')
 export class UsersController {
@@ -9,7 +10,7 @@ export class UsersController {
   @Public()
   @HttpCode(HttpStatus.CREATED)
   @Post()
-  createUser(@Body() body: any) {
-    return this.userService.createUser(body);
+  createUser(@Body() createUsersDto: CreateUsersDto) {
+    return this.userService.createUser(createUsersDto);
   }
 }
