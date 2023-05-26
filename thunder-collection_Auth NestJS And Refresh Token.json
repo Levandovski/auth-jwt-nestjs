@@ -1,0 +1,84 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Auth NestJS And Refresh Token",
+    "dateExported": "2023-05-26T13:10:05.270Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3283cda4-4955-4707-9194-887d022e9344",
+            "colId": "3a93f6af-d570-4d9c-bdd7-72c3f4152af3",
+            "containerId": "",
+            "name": "Create users",
+            "url": "http://localhost:3001/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-22T19:15:26.272Z",
+            "modified": "2023-05-22T19:15:26.272Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Jessé Levandovski 2\",\n  \"username\": \"jesse.l2\",\n  \"password\": \"123321\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5b340253-8750-46c2-b47c-1d4e68c0ca9e",
+            "colId": "3a93f6af-d570-4d9c-bdd7-72c3f4152af3",
+            "containerId": "",
+            "name": "Refresh token",
+            "url": "http://localhost:3001/refresh-token",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-22T19:15:50.016Z",
+            "modified": "2023-05-22T19:15:50.016Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"refreshToken\": \"4d6e8ff1-e5b2-4ed1-bc20-24e47bfe3ce8\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "883883f5-1e6e-4d78-9779-7023c2bf3198",
+            "colId": "3a93f6af-d570-4d9c-bdd7-72c3f4152af3",
+            "containerId": "",
+            "name": "Profile",
+            "url": "http://localhost:3001/auth/profile",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-05-22T19:16:13.724Z",
+            "modified": "2023-05-22T19:16:13.724Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Implc3NlLmwiLCJpYXQiOjE2ODI3MTQ1MTksImV4cCI6MTY4MjcxNDU3OX0.nsq1yW_egcLOpF98uCAQE-_J4eptqJA_UJLI1c8YWDM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d3069b50-f8e0-49cc-9b05-fee72a77f2e9",
+            "colId": "3a93f6af-d570-4d9c-bdd7-72c3f4152af3",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3001/auth/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-22T19:16:25.900Z",
+            "modified": "2023-05-22T19:16:25.900Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"jesse.l\",\n  \"password\": \"123321\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
